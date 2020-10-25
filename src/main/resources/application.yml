@@ -1,0 +1,66 @@
+spring:
+  profiles:
+    active: dev, qa
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:db/liquibase-changelog-master.xml
+
+server:
+  port: 8081
+
+survey-lab:
+  swagger:
+    api-title: Survey-Lab
+    api-description: Georgi's Survey-Lab application
+    api-version: 1.0
+    service-name: Georgi Demirev
+    service-url: no url
+    service-email: gdemirev@gmail.com
+    terms-of-service-url: Free to use
+    license: no license
+    license-url: no license
+
+logging:
+  level:
+    io:
+      swagger:
+        models:
+          parameters:
+            AbstractSerializableParameter: error
+---
+spring:
+  profiles: dev, qa
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver: org.h2.Driver
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  liquibase:
+    contexts: dev,qa
+
+---
+spring:
+  profiles: mydb
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/survey_lab
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: survey-lab-user
+    password: 1234
+
+  liquibase:
+    contexts: mydb

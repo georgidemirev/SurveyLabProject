@@ -1,0 +1,51 @@
+id,created_on,text,is_multiple_choice,is_completed,expiry_date,user_id
+1,2019-07-14 14:52:28,Little brown dove,true,false,2019-10-14 20:42:29,7
+2,2019-08-29 01:51:28,Smiths bush squirrel,true,false,2020-02-03 23:44:35,6
+3,2020-01-21 09:15:06,American racer,true,false,2019-07-19 02:29:07,4
+4,2019-08-16 01:00:17,Baleen whale,true,false,2019-11-19 16:07:23,5
+5,2019-11-21 04:51:25,Peccary white-lipped,false,false,2019-04-12 11:19:51,7
+6,2019-06-17 11:32:29,Leopard,false,true,2019-03-13 01:02:39,1
+7,2019-06-23 22:29:27,Chital,false,false,2019-10-12 11:17:54,3
+8,2019-05-26 06:26:43,Red and blue macaw,true,true,2019-09-28 09:49:16,8
+9,2019-03-31 12:55:33,Creeper black-tailed tree,false,true,2019-11-10 12:03:42,9
+10,2020-01-21 19:09:14,Land iguana,false,false,2019-06-02 01:36:41,7
+11,2019-12-04 16:11:16,Skunk striped,true,true,2019-07-05 19:20:51,5
+12,2019-05-23 11:57:26,African lion,true,false,2019-09-05 09:56:19,6
+13,2019-11-09 13:57:21,Sociable weaver,false,true,2019-05-21 16:21:50,7
+14,2019-12-25 00:20:14,Cobra egyptian,true,false,2019-06-14 18:27:55,10
+15,2019-05-03 10:40:40,Eland common,false,true,2019-10-17 04:48:59,8
+16,2019-10-30 10:09:17,Southern lapwing,true,true,2019-11-22 10:17:15,3
+17,2019-04-14 14:11:14,Arctic lemming,true,false,2019-03-09 08:15:38,3
+18,2019-10-08 04:19:10,Four-spotted skimmer,false,true,2020-01-26 10:56:15,1
+19,2019-08-19 15:05:46,Glider squirrel,false,false,2019-07-30 04:51:33,2
+20,2019-03-13 02:57:19,Vulture turkey,false,false,2019-12-31 12:32:26,7
+21,2019-11-15 07:42:00,African red-eyed bulbul,true,false,2019-07-12 19:50:35,6
+22,2019-07-07 00:59:57,Fox crab-eating,true,false,2019-05-25 22:38:17,1
+23,2019-04-14 22:28:32,White-headed vulture,false,true,2019-11-29 09:09:29,6
+24,2019-08-10 06:00:27,Bee-eater white-fronted,false,true,2019-06-09 16:14:07,1
+25,2019-11-07 21:31:40,Civet cat,true,true,2019-10-15 17:23:22,2
+26,2019-10-03 06:40:05,Tiger snake,true,false,2019-08-12 20:48:52,3
+27,2019-12-25 14:55:09,Arctic lemming,false,true,2019-07-14 21:38:15,3
+28,2019-07-20 16:44:46,Grizzly bear,false,false,2019-04-03 15:31:54,4
+29,2019-11-10 11:42:33,Weaver sociable,false,false,2019-03-28 02:38:14,6
+30,2020-01-04 21:59:32,Flicker field,true,true,2019-06-08 23:18:21,7
+31,2019-10-21 18:05:05,Rufous-collared sparrow,true,false,2019-07-02 01:16:24,1
+32,2019-10-07 07:21:09,Bird pied butcher,false,false,2020-02-02 02:01:47,9
+33,2019-06-23 18:48:18,Weeper capuchin,false,false,2019-11-22 05:08:09,3
+34,2019-10-29 18:44:43,Mudskipper (unidentified),true,true,2019-09-03 00:52:49,5
+35,2019-10-16 08:13:31,Steller sea lion,false,true,2019-06-07 23:11:14,1
+36,2019-05-12 22:47:09,Crake african black,true,false,2019-08-15 15:36:48,5
+37,2019-04-28 19:17:55,Hedgehog south african,true,false,2019-09-24 06:34:30,6
+38,2019-03-13 06:16:40,Silver-backed fox,false,false,2019-11-26 11:10:25,9
+39,2019-05-08 00:45:27,Komodo dragon,false,false,2019-03-31 01:03:24,6
+40,2019-12-25 22:10:19,Dusky gull,true,false,2019-10-21 14:52:29,8
+41,2019-03-26 10:12:47,Giraffe,true,true,2019-12-16 10:39:21,5
+42,2019-08-15 07:57:09,Mountain goat,false,false,2020-02-04 09:07:40,2
+43,2019-03-09 01:56:37,Coqui francolin,false,false,2019-07-11 23:05:44,9
+44,2019-03-30 20:17:02,Australian pelican,true,true,2019-09-25 01:52:32,1
+45,2019-11-17 09:51:03,Red howler monkey,true,true,2019-12-10 00:46:28,10
+46,2019-12-26 18:11:58,Potoroo,true,false,2019-03-23 04:07:18,1
+47,2020-01-10 00:27:46,Mexican beaded lizard,true,true,2019-04-27 01:48:49,9
+48,2019-09-24 06:49:12,Brolga crane,true,true,2019-06-06 09:17:45,6
+49,2019-07-09 02:38:37,Barbet crested,true,true,2019-08-20 21:51:25,4
+50,2020-01-24 08:49:01,Otter cape clawless,true,true,2020-02-25 20:20:39,9

@@ -1,0 +1,74 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-100" context="dev,qa" dbms="h2">
+        <loadData catalogName="cat"
+                  commentLineStartsWith="A String"
+                  encoding="UTF-8"
+                  file="csv/user.csv"
+                  quotchar="'"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="user"
+                  usePreparedStatements="true">
+            <column name="id" type="NUMERIC"/>
+            <column name="created_on" type="DATE"/>
+            <column name="username" type="STRING"/>
+            <column name="password" type="STRING"/>
+            <column name="first_name" type="STRING"/>
+            <column name="last_name" type="STRING"/>
+        </loadData>
+
+        <loadData catalogName="cat"
+                  commentLineStartsWith="A String"
+                  encoding="UTF-8"
+                  file="csv/poll.csv"
+                  quotchar="'"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="poll"
+                  usePreparedStatements="true">
+            <column name="id" type="NUMERIC"/>
+            <column name="created_on" type="DATE"/>
+            <column name="text" type="STRING"/>
+            <column name="is_multiple_choice" type="BOOLEAN"/>
+            <column name="is_completed" type="BOOLEAN"/>
+            <column name="expiry_date" type="DATE"/>
+            <column name="user_id" type="NUMERIC"/>
+        </loadData>
+
+        <loadData catalogName="cat"
+                  commentLineStartsWith="A String"
+                  encoding="UTF-8"
+                  file="csv/poll_option.csv"
+                  quotchar="'"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="poll_option"
+                  usePreparedStatements="true">
+            <column name="id" type="NUMERIC"/>
+            <column name="created_on" type="DATE"/>
+            <column name="number_of_votes" type="NUMERIC"/>
+            <column name="text" type="STRING"/>
+            <column name="poll_id" type="NUMERIC"/>
+        </loadData>
+
+        <loadData catalogName="cat"
+                  commentLineStartsWith="A String"
+                  encoding="UTF-8"
+                  file="csv/user_poll_option.csv"
+                  quotchar="'"
+                  relativeToChangelogFile="true"
+                  schemaName="public"
+                  separator=","
+                  tableName="user_poll_option"
+                  usePreparedStatements="true">
+            <column name="user_id" type="NUMERIC"/>
+            <column name="poll_option_id" type="NUMERIC"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

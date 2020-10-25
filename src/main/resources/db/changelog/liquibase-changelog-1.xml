@@ -1,0 +1,113 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-1">
+        <createTable tableName="poll">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="created_on" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="text" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueBoolean="false" name="is_multiple_choice" type="BIT(3)"/>
+            <column defaultValueBoolean="false" name="is_completed" type="BIT(3)"/>
+            <column defaultValue="0000-00-00 00:00:00" name="expiry_date" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-2">
+        <createTable tableName="poll_option">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="created_on" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="number_of_votes" type="INT"/>
+            <column name="text" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="poll_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-3">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="created_on" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-4">
+        <createTable tableName="user_poll_option">
+            <column name="user_id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="poll_option_id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-5">
+        <createIndex indexName="fk_poll_option_poll_poll_id" tableName="poll_option">
+            <column name="poll_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-6">
+        <createIndex indexName="fk_poll_user_user_id" tableName="poll">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-7">
+        <createIndex indexName="fk_user_poll_option_poll_option_id" tableName="user_poll_option">
+            <column name="poll_option_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-8">
+        <addForeignKeyConstraint baseColumnNames="poll_id" baseTableName="poll_option"
+                                 constraintName="fk_poll_option_poll_poll_id" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="id" referencedTableName="poll" validate="true"/>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-9">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="poll" constraintName="fk_poll_user_user_id"
+                                 deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="id" referencedTableName="user" validate="true"/>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-10">
+        <addForeignKeyConstraint baseColumnNames="poll_option_id" baseTableName="user_poll_option"
+                                 constraintName="fk_user_poll_option_poll_option_id" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="id" referencedTableName="poll_option" validate="true"/>
+    </changeSet>
+    <changeSet author="DEG1SF3 (generated)" id="1582732413526-11">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_poll_option"
+                                 constraintName="fk_user_poll_option_user_id" deferrable="false"
+                                 initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT"
+                                 referencedColumnNames="id" referencedTableName="user" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
