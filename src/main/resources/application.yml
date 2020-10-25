@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/survey_lab
+    username: survey-lab-user
+    password: 1234
+
+survey:
+  lab:
+    api-title: Survey-Lab
+    api-description: Georgi's Survey-Lab application
+    api-version: 1.0
+    service-name: Georgi Demirev
+    service-url: no url
+    service-email: georgidemirev1999@gmail.com
+    terms-of-service-url: Free to use
+    license: no license
+    license-url: no license
+
+---
+
+spring:
+  profiles: dev
+
+---
+
+spring:
+  profiles: qa
