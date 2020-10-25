@@ -77,6 +77,5 @@ public class PollRepositoryImplTest {
         Assert.assertEquals("Wrong boolean is multiple choice", EXPECTED_IS_MULTIPLE_CHOICE, expectedPoll.get().isMultipleChoice());
         Assert.assertEquals("Wrong expiry date", EXPECTED_EXPIRY_DATE, expectedPoll.get().getExpiryDate());
         Assert.assertEquals("Wrong created on time", EXPECTED_CREATED_ON, expectedPoll.get().getCreatedOn());
-
     }
 }
